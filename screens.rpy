@@ -857,7 +857,7 @@ style check_button_text:
     properties gui.button_text_properties("check_button")
 
 style slider_slider:
-    xsize 350
+    xsize 230
 
 style slider_button:
     properties gui.button_properties("slider_button")

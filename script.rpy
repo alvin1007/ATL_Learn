@@ -3,9 +3,7 @@ style big:
     size 100
     xalign 0.5
     yalign 0.5
-style game_start_menu:
-    yalign 0.7
-
+    
 ## 특수 스크린
 screen game_start_menu:
     tag menu
@@ -80,7 +78,7 @@ screen preferences():
     use game_menu(_("Preferences"), scroll="viewport"):
         style_group "prefs"
         vbox:
-            null height 120
+            null height 100
             hbox :
                 vbox:
                     label _("Display")
@@ -104,10 +102,12 @@ screen preferences():
                     textbutton _("Keep Skipping") action Preference("after choices", "skip")
                 null width 50
                 vbox:
+                    style_prefix "slider"
                     label _("Auto-Forward Time")
                     bar value Preference("auto-forward time")
             null height 30
             vbox:
+                style_prefix "slider"
                 vbox:
                     label _("Music Volume")
                     bar value Preference("music volume")
